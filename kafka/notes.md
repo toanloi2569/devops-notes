@@ -33,3 +33,9 @@ Sử dụng kafkacat để kiểm tra kafka
    ```
    kcat -b <ip>:<port> -C -t <topic name>
    ```
+
+5. Trường hợp cần thêm authentication  
+   Khi cần thêm authentication, thêm option `-X security.protocol` và các option liên quan. Ví dụ với SASL_PLAINTEXT, ta có lệnh sau:  
+   ```
+   kcat -b <ip>:<port> -X security.protocol=SASL_PLAINTEXT -X sasl.mechanisms=PLAIN -X sasl.username=<username> -X sasl.password=<password> -P -t <topic name>
+   ```
