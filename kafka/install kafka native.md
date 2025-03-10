@@ -11,9 +11,9 @@ sudo apt-get install openjdk-11-jdk
 ### Get kafka  
 [Download](https://kafka.apache.org/downloads) kafka và giải nén
 ```aiignore
-wget https://dlcdn.apache.org/kafka/3.9.0/kafka-3.9.0-src.tgz
-tar -xzf kafka-3.9.0-src.tgz
-mv kafka-3.9.0-src /opt/kafka
+wget https://dlcdn.apache.org/kafka/3.9.0/kafka_2.12-3.9.0.tgz
+tar -xzf kafka_2.12-3.9.0.tgz
+mv kafka_2.12-3.9.0 /opt/kafka
 ```
 
 ### Config Kafka
@@ -153,7 +153,7 @@ Liệt kê danh sách broker và topic
 kcat -L -b <ip>:<port>
 
 # Sử dụng authentication SASL_PLAINTEXT
-kcat -L -b -X security.protocol=SASL_PLAINTEXT -X sasl.mechanisms=PLAIN -X sasl.username=admin -X sasl.password=password 
+kcat -L -b <ip>:<port> -X security.protocol=SASL_PLAINTEXT -X sasl.mechanisms=PLAIN -X sasl.username=admin -X sasl.password=password 
 ```
 
 Kiểm tra kết nối producer và broker  

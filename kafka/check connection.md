@@ -39,3 +39,9 @@ Sử dụng kafkacat để kiểm tra kafka
    ```
    kcat -b <ip>:<port> -X security.protocol=SASL_PLAINTEXT -X sasl.mechanisms=PLAIN -X sasl.username=<username> -X sasl.password=<password> -P -t <topic name>
    ```
+
+6. Trường hợp cần search theo thời gian
+   Thêm tham số -o và timestampt (mili giây) để search theo thời gian
+   ```
+   kcat -b <ip>:<port> -C -t <topic name> -o s@<timestamp-milisecond> -o e@<timestamp-milisecond>
+   ```

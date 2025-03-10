@@ -65,6 +65,11 @@ pendulum = "^2.1"
 ### Using your virtual environment
 
 **Activating the virtual environment**  
+Thêm plugin poetry shell 
+```
+poetry self add poetry-plugin-shell
+```
+
 Sử dụng lệnh sau để activate virtual environment
 ```
 $ poetry shell
